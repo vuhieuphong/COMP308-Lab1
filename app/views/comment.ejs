@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Give comment
+    </title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems, {});
+        });
+    </script>
+</head>
+
+<body>
+    <div class="row" style="width: 700px;display: flex;align-items: center;justify-content: center;">
+        <div class="col s12">
+            <div class="card #e8f5e9 green lighten-5">
+                <div class="card-content">
+                    <span class="card-title">Give your Evaluation</span>
+
+                    <form method="post">
+                        <div class="input-field col s12">
+                            <input type="text" name="email" value="<%= email %>" readonly/>
+                            <label for="email">Email (readonly)</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input type="text" placeholder="Enter your course code" name="courseCode">
+                            <label for="courseCode">Course Code</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input type="text" placeholder="Enter your course name" name="courseName">
+                            <label for="courseName">Course Name</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input type="text" placeholder="Enter your favorite topic" name="favTopic">
+                            <label for="favTopic">Favorite Topic</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input type="text" placeholder="Enter your favorite assignment" name="favAssignment">
+                            <label for="favAssignment">Favorite Assignment</label>
+                        </div>
+                    
+                        <div class="input-field col s12">
+                            <!-- <textarea id="textarea1" class="materialize-textarea"></textarea> -->
+                            <textarea placeholder="Enter your comment" class="materialize-textarea" name="comment"></textarea>
+                            <label for="comment">Comment</label>
+                          </div>
+
+                          <div class="input-field col s12">
+                            <select name="rating">
+                              <option value="" disabled selected>Select a rating</option>
+                              <option value="Good">Good</option>
+                              <option value="Fair">Fair</option>
+                              <option value="Bad">Bad</option>
+                            </select>
+                            
+                            <label>Rating</label>
+                          </div>                        
+                    
+                          <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
